@@ -1,0 +1,15 @@
+@startuml a191409
+title:sample
+class Student{
+ int number
+ String name
+ String adress
+ int phonenumber
+}
+class School{
+ String gakubu
+ String adress
+ int phonenumber
+}
+Student <|-- School
+@enduml
