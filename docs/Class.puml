@@ -1,0 +1,35 @@
+@startuml classsample
+title: 技ゼミ:クラス図
+
+class User {
+    int id
+    String name
+    String pass
+    int[] follow
+}
+class Article {
+    int id
+    String title
+    String name
+    String address
+    String comment
+    int like
+}
+class Comment {
+    int id
+    String article
+    String title
+    String comment
+}
+class Evaluation{
+    boolean like
+    boolean dis
+}
+
+User "1" *-- "0...*" Article
+User "1" *-- "0...*" Comment
+User "1" *-- "0...*" Evaluation
+Article "1" *-- "0...*" Comment
+Article "1" *-- "0...*" Evaluation
+
+@enduml
