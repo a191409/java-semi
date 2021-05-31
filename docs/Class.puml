@@ -3,9 +3,9 @@ title: 技ゼミ:クラス図
 
 class User {
     int id
+    String userid
     String name
     String pass
-    int[] follow
 }
 class Article {
     int id
@@ -13,23 +13,29 @@ class Article {
     String name
     String address
     String comment
-    int like
+    int User_id
 }
 class Comment {
     int id
     String article
     String title
     String comment
+    int User_id
+    int Article_id
 }
 class Evaluation{
     boolean like
     boolean dis
+    int User_id
+    int Article_id
+}
+class Follow{
+    int User_id
+    int User_id_Follow
 }
 
 User "1" *-- "0...*" Article
-User "1" *-- "0...*" Comment
-User "1" *-- "0...*" Evaluation
 Article "1" *-- "0...*" Comment
 Article "1" *-- "0...*" Evaluation
-
+User "0...*" *-- "0...*" Follow
 @enduml
