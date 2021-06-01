@@ -17,7 +17,6 @@ class Article {
 }
 class Comment {
     int id
-    String article
     String title
     String comment
     int User_id
