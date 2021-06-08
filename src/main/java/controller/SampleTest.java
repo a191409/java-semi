@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-@WebServlet("/test0610")//ウェブサーブレットアドテーション
+@WebServlet("/test0610")//ウェブサーブレットアノテーション
 public class SampleTest extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
@@ -16,9 +16,9 @@ public class SampleTest extends HttpServlet {
         // html を返す。文字コードは、UTF-8。
         response.setContentType("text/html; charset=UTF-8");
         // なんか処理してるっぽいようにしたいので、文字列を用意する。
-        String name = "木村華\n";
-        String university = "東京学芸大学\n";
-        String classes = "情報科\n";
+        String name = "木村華<br>\n";
+        String university = "東京学芸大学<br>\n";
+        String classes = "情報科<br>\n";
         // 返す html を生成する。
         PrintWriter out = response.getWriter();
         out.println("<html>\n" + name + university + classes + "</html>");
