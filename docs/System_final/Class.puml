@@ -1,0 +1,25 @@
+@startuml classsample
+title: 情報システム設計最終課題
+
+class Opponent {
+    int id
+    String name
+}
+class  Result{
+    int id
+    int round
+    bit didwin
+    int Opponent_id
+    int Match_id
+
+}
+class Match{
+    int id
+    Date date
+    String name
+}
+
+Opponent "0..*" -- "0..*" Result
+Match "0..*" -- "0..*" Result
+
+@enduml
